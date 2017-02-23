@@ -12,7 +12,7 @@ jdk:
 before_install:
     - chmod +x gradlew
 script:
-    - "./gradlew build assembleRelease"
+    - ./gradlew build assembleRelease
 deploy:
   provider: releases
   api_key:
