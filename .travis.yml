@@ -12,6 +12,6 @@ jdk:
     - oraclejdk8
 
 before_install:
-    - chmod -x ./Calculator_v2/gradlew
+ - chmod +x gradlew
 script:
-    - ./Calculator_v2/gradlew build
+    - ./gradlew build
