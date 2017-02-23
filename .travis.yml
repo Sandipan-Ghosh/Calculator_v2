@@ -13,3 +13,12 @@ before_install:
     - chmod +x gradlew
 script:
     - ./gradlew build assembleRelease
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: inOLloTiW4hCirp1HJ29F7IKBr1YW8lakyFa4pGEKGYoX+YhdyJGe2jUqbd2WfQZPOxxHYPTksqeJ0ZvQwCahgbyajxl/wlXKA2avHH5cERsZmxR/oaIYS9d8lxHul6+1igGoP0xqyLB0oQvASrWKVodMiWray5qVVAkX4JgAholaia/QGMrh6rJ5L0PPitJ8OvEyBqrXVkJG3C9iNUhGONp4Aehak5n+lG8/WIevq4cPyiXi7eb84s+3yAcQLOBiCz7uxydwIXMYL65ZocCcV6LSzryuLKU4wNbv9/P0eL+aY4bKQdBHEoXOaGIyv0NJj4wjuKfoddTsvDQe2M9imWS6QqRbvDqopRxFAZV4rpF9Nq7F7ItCo0JR4ncfBYtS0xLDD5A/8Z0S2Zf0g3DqdY347cKIsx8s4AH1ro9hyBKEWNKixkxWyA4WtK/M0/GITjbh1bcJeTTKSUfYvqp47AqrNq+PlOXLshj/Jqoh9AhvnABhYE2K1F1lUOYfw8cL0ArfMvDDhAj8hLj4Eio23YY55zNhDpMqM65Q/ZDhHstvPulTliTmks3rmunlrSWA0vw5JowNnNtbMiXzrjaACrpvcceIiZwMDRD1nyPLYgGrkbFbGCAl6u2dEK+noeuu79NgUhxRLnk9BA1m1C7a/euU3hPLLIWXq8n2jSXRXE=
+ file: ./app/build/outputs/apk/app-release-unsigned.apk
+ on:
+    repo: Sandipan-Ghosh/Calculator_v2
