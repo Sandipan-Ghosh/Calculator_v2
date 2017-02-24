@@ -2,15 +2,17 @@ language: android
 android:
   components:
   - tools
-  - build-tools-22.0.1
-  - android-22
+  - build-tools-25.0.2
+  - android-25
   - platform-tools
   - extra-android-support
   - extra-android-m2repository
-before_install:
-    - chmod +x gradlew
 jdk:
     - oraclejdk8
+before_install:
+    - chmod +x gradlew
+script:
+    - ./gradlew build assembleRelease
 
 deploy:
     provider: releases
