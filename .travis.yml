@@ -9,5 +9,5 @@ android:
 jdk:
     - oraclejdk8
 
-
+- sys-img-armeabi-v7a-android-25
 
